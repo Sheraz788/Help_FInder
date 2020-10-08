@@ -1,0 +1,199 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context="com.example.letsride.com.example.helpfinder.ui.settings.UpdateProfileFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/ly_update_profile"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile_img"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:src="@drawable/profile" />
+
+
+                <ImageButton
+                    android:id="@+id/add_image_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/add_image_icon" />
+
+
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_below="@id/ly_update_profile">
+
+                <TextView
+                    android:id="@+id/tv_first_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_name"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_font_size"/>
+
+                <EditText
+                    android:id="@+id/txt_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_first_name"
+                    android:hint="@string/first_name"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_below="@id/rel_first_name">
+
+                <TextView
+                    android:id="@+id/tv_last_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_name"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_font_size"/>
+
+                <EditText
+                    android:id="@+id/txt_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_last_name"
+                    android:hint="@string/last_name"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_contact_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_below="@id/rel_last_name">
+
+                <TextView
+                    android:id="@+id/tv_contact_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_number"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_font_size"/>
+
+                <EditText
+                    android:id="@+id/txt_contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_contact_number"
+                    android:hint="@string/contact_number"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_below="@id/rel_contact_number">
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_font_size"/>
+
+                <EditText
+                    android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_email"
+                    android:hint="@string/email"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_per_hour_charges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                android:layout_below="@id/rel_email">
+
+                <TextView
+                    android:id="@+id/tv_per_hour_charges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Per Hour Charges"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_font_size"/>
+
+                <EditText
+                    android:id="@+id/txt_per_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_per_hour_charges"
+                    android:hint="Per Hour Charges"/>
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/update_btn"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_per_hour_charges"
+                android:layout_marginTop="20dp"
+                android:layout_margin="5dp"
+                android:inputType="number"
+                android:layout_marginBottom="5dp"
+                android:background="#000"
+                android:padding="16dp"
+                android:text="@string/update"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_font_size"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

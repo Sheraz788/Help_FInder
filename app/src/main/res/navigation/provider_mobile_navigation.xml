@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.helpfinders.provider.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_chatLogFragment"
+            app:destination="@id/nav_chatLogFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_chat"
+        android:name="com.example.helpfinders.provider.ui.chat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_nav_chat_to_nav_chatLogFragment"
+            app:destination="@id/nav_chatLogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_chatLogFragment"
+        android:label="Username"
+        android:name="com.example.helpfinders.provider.ui.chat.ChatLogFragment"
+        tools:layout="@layout/fragment_chat_log"/>
+
+    <fragment
+        android:id="@+id/nav_past_trips"
+        android:name="com.example.helpfinders.provider.ui.pastservices.PastServicesFragment"
+        android:label="Past Trips"
+        tools:layout="@layout/fragment_past_services" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.helpfinders.provider.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_nav_settings_to_nav_update_profile"
+            app:destination="@id/nav_update_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_update_profile"
+        android:name="com.example.helpfinders.provider.ui.settings.UpdateProfileFragment"
+        android:label="@string/update_profile"
+        tools:layout="@layout/fragment_update_profile">
+        <action
+            android:id="@+id/action_nav_update_profile_to_nav_settings"
+            app:destination="@id/nav_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.example.helpfinders.provider.ui.notifications.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.example.helpfinders.provider.ui.help.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+
+
+</navigation>

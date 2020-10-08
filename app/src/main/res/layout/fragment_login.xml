@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_login_gradients"
+    tools:context="com.example.helpfinders.activities.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- Here you can replace it with your logo or brand name -->
+            <ImageView
+                android:layout_width="260dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:padding="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/may_i_help_you"/>
+            <EditText
+                android:id="@+id/txt_contact_number"
+                android:layout_marginTop="40dp"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_email_black_24dp"
+                android:background="#90cecece"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:layout_gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#545454"
+                android:textColorHint="#545454"
+                android:textSize="12dp"
+                android:drawableStart="@drawable/ic_email_black_24dp" />
+
+            <EditText
+                android:id="@+id/txt_password"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="9dp"
+                android:background="#90cecece"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#545454"
+                android:textColorHint="#545454"
+                android:textSize="12dp"
+                android:drawableStart="@drawable/ic_lock_black_24dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/remember_me"
+                android:textColor="#000000"
+                android:padding="8dp"
+                />
+            <Button
+                android:id="@+id/login"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="#000"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="@string/log_in"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000"
+                android:text="@string/sign_up"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"
+                android:textStyle="normal"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.letsride.com.example.helpfinder.activities.PhoneVerificationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_verification"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/verification_string"
+            android:textSize="@dimen/text_font_size"
+            />
+
+        <EditText
+            android:id="@+id/txt_verification_code"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_verification"
+            android:layout_alignStart="@+id/tv_verification"
+            android:layout_alignLeft="@+id/tv_verification"
+            android:layout_alignEnd="@+id/tv_verification"
+            android:layout_alignRight="@+id/tv_verification"
+            android:hint="@string/enter_code"
+            android:layout_marginTop="15dp"
+            android:background="@color/transparent"/>
+
+        <Button
+            android:id="@+id/verify_phone_btn"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_verification_code"
+            android:layout_alignStart="@+id/txt_verification_code"
+            android:layout_alignLeft="@+id/txt_verification_code"
+            android:layout_alignEnd="@+id/txt_verification_code"
+            android:layout_alignRight="@+id/txt_verification_code"
+            android:layout_marginTop="16dp"
+            android:background="#000"
+            android:padding="16dp"
+            android:text="@string/verify_code"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verify_phone_btn"
+            android:text="@string/resend_code"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:layout_alignStart="@+id/verify_phone_btn"
+            android:layout_alignLeft="@+id/verify_phone_btn"
+            android:layout_alignEnd="@+id/verify_phone_btn"
+            android:layout_alignRight="@+id/verify_phone_btn"
+            android:gravity="end"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignStart="@+id/txt_verification_code"
+            android:layout_alignLeft="@+id/txt_verification_code"
+            android:layout_alignEnd="@+id/txt_verification_code"
+            android:layout_alignRight="@+id/txt_verification_code"
+            android:layout_centerVertical="true"
+         />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

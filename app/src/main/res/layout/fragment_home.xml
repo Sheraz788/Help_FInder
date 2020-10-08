@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.helpfinders.provider.ui.home.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/rel_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.helpfinders.activities.MainActivity" />
+
+            <FrameLayout
+                android:id="@+id/ly_provider_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp">
+
+                <Spinner
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/dropdown_background"
+                    android:hint="Search Service"
+                    android:iconifiedByDefault="false"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp" />
+
+                <Spinner
+                    android:id="@+id/service_categories_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/dropdown_background"
+                    android:hint="Service Category"
+                    android:iconifiedByDefault="false"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_provider_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rel_arrival_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_arrival"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingStart="30dp"
+                            android:paddingLeft="30dp"
+                            android:text="Arrival Time"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_arrival_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@drawable/circular_button_background"
+                            android:gravity="center"
+                            android:paddingStart="15dp"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="5dp"
+                            android:text="4 min"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:id="@+id/view_line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rel_arrival_info"
+                        android:background="@color/gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_line1"
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_user_profile"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile" />
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toEndOf="@id/img_user_profile"
+                            android:layout_toRightOf="@id/img_user_profile"
+                            android:gravity="center"
+                            android:text="Ahmad Raza"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:id="@+id/chat_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_username"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@id/img_user_profile"
+                            android:layout_toRightOf="@id/img_user_profile"
+                            android:background="@drawable/circular_button_background"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Chat"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/confirm_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_username"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@id/img_user_profile"
+                            android:layout_toRightOf="@id/img_user_profile"
+                            android:background="@drawable/circular_button_background"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Confirm"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_provider_status"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:background="@drawable/grey"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/status_switch_btn"
+                android:textOff="OFF"
+                android:textOn="ON"
+                android:textColor="#fff"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="18sp"
+                android:thumb="@drawable/sw_thumb"
+                app:track="@drawable/sw_track"
+                app:showText="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <!--            <ImageView-->
+            <!--                android:src="@drawable/pic2"-->
+            <!--                android:layout_width="60dp"-->
+            <!--                android:layout_height="wrap_content"/>-->
+            <TextView
+                android:layout_centerVertical="true"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:layout_marginLeft="30dp"
+                android:text="Go Online"
+                android:textStyle="bold"
+                android:layout_marginStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <!--            <TextView-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:textColor="#fff"-->
+            <!--                android:layout_marginLeft="65dp"-->
+            <!--                android:textSize="18sp"-->
+            <!--                android:text="Toyota LEB-1234"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"/>-->
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

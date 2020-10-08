@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "594555520443",
+    "firebase_url": "https://help-finder-6fde2.firebaseio.com",
+    "project_id": "help-finder-6fde2",
+    "storage_bucket": "help-finder-6fde2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594555520443:android:904c6073331a58fca2b09e",
+        "android_client_info": {
+          "package_name": "com.example.helpfinders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594555520443-ufo1o6gi6afuhr9q7ifkidpi15nqb0nl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.helpfinders",
+            "certificate_hash": "4fd963a05b4114fc61d466cb27b07b6ca0d06fa2"
+          }
+        },
+        {
+          "client_id": "594555520443-ofnga8fuivuvgboicap5p7n96e4mqs0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApseMyCM-SGx-5GT5dyk_f3i2ip_OqSdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594555520443-ofnga8fuivuvgboicap5p7n96e4mqs0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
